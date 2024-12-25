@@ -10,5 +10,5 @@ export function middleware(request) {
   return NextResponse.next();
 }
 export const config = {
-    matcher: ['/about/:path*','/studentlist/:path*']
+    matcher: ['/studentlist/:path*']
     };
