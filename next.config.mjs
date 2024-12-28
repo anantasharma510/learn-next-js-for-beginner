@@ -1,8 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images:{
-        domains:["https://letsenhance.io/"]
-    }
+    redirects: async () => {
+        return [
+            {
+                source: '/user',
+                destination: '/',
+                permanent: false,
+            },
+            {
+                source: '/user/:userid',
+                destination: '/',
+                permanent: false,
+            },
+            {
+                source: '/admin',
+                destination: '/',
+                permanent: false,
+            },
+        ];
+    },
 };
 
-export default nextConfig;
+export default nextConfig; 
